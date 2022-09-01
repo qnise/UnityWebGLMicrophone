@@ -80,7 +80,7 @@ var MicrophonePlugin = {
 			  j = (j + 1) % document.dataArray.length;
 			}
 			document.position = (document.position + document.tempSize) % document.dataArray.length;
-
+			console.log("FUCK THIS SHIT" + document.dataArray);
 		  };
 
 		  document.readDataOnInterval();
@@ -135,11 +135,11 @@ var MicrophonePlugin = {
     if (microphones != undefined) {
       if (index >= 0 && index < microphones.length) {
 	    if (microphones[index] != undefined) {
-		  returnStr = microphones[index];
+		  returnStr = microphones[0];
 		}
       }
     }  
-	console.log("GetMicrophoneDeviceName", returnStr);
+	console.log("GetMicrophoneDeviceName", returnStr, "test");
     var buffer = _malloc(lengthBytesUTF8(returnStr) + 1);
     writeStringToMemory(returnStr, buffer);
     return buffer;

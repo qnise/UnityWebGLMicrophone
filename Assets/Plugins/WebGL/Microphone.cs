@@ -27,11 +27,11 @@ namespace UnityEngine
 
         public static void Update()
         {
-            for (int i = 0; i < _sActions.Count; ++i)
-            {
-                Action action = _sActions[i];
-                action.Invoke();
-            }
+            //for (int i = 0; i < _sActions.Count; ++i)
+            //{
+            //    Action action = _sActions[i];
+            //    action.Invoke();
+            //}
         }
 
         public static string[] devices
